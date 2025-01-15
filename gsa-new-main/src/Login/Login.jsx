@@ -42,7 +42,7 @@ function Login() {
     if (validate()) {
       setIsLoading(true); // Show loading animation on submit
       try {
-        const response = await axios.post(`http://${ip}/api/auth/login`, {
+        const response = await axios.post(`https://${ip}/api/auth/login`, {
           email,
           password,
           recaptchaToken,

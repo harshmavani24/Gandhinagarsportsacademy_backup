@@ -79,7 +79,7 @@ const AccountsOverview = () => {
         return;
       }
 
-      await axios.post(`http://${ip}/api/accounts/transaction/add`, {
+      await axios.post(`https://${ip}/api/accounts/transaction/add`, {
         ...newExpense,
         email,
       });
@@ -123,8 +123,8 @@ const AccountsOverview = () => {
 
     try {
       const [fetchedResponse, accountResponse] = await Promise.all([
-        axios.post(`http://${ip}/api/accounts/data`, { userid }),
-        axios.post(`http://${ip}/api/accounts/transactions`, { userid }),
+        axios.post(`https://${ip}/api/accounts/data`, { userid }),
+        axios.post(`https://${ip}/api/accounts/transactions`, { userid }),
       ]);
       setAccounts(
         Array.isArray(accountResponse.data) ? accountResponse.data : []

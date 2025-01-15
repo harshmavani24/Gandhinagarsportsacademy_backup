@@ -12,7 +12,7 @@ const AttendanceManagement = () => {
     // Function to update trainee-student information on page load
     const updateTraineeStudent = async () => {
         try {
-            const response = await fetch(`http://${ip}/api/manager/update-trainee-student`, {
+            const response = await fetch(`https://${ip}/api/manager/update-trainee-student`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -31,7 +31,7 @@ const AttendanceManagement = () => {
     // Function to fetch attendance data
     const fetchAttendanceData = async (selectedDate = date) => {
         try {
-            const response = await fetch(`http://${ip}/api/manager/trainee-attendance`, {
+            const response = await fetch(`https://${ip}/api/manager/trainee-attendance`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const AttendanceManagement = () => {
     // Function to mark attendance
     const markAttendance = async () => {
         try {
-            const response = await fetch(`http://${ip}/api/manager/take-attendance`, {
+            const response = await fetch(`https://${ip}/api/manager/take-attendance`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

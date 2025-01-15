@@ -46,7 +46,7 @@ const ContactUs = () => {
       setErrors(validationErrors);
     } else {
       try {
-        const apiEndpoint = `http://${ip}/api/dashboard/newquery`;
+        const apiEndpoint = `https://${ip}/api/dashboard/newquery`;
         const requestBody = {
           ...formData,
           recaptchaToken,

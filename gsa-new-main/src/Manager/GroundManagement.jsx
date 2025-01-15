@@ -42,13 +42,13 @@ const GroundManagement = () => {
 
     useEffect(() => {
         // Fetch ground plans
-        fetch(`http://${ip}/api/ground/plans`)
+        fetch(`https://${ip}/api/ground/plans`)
             .then((response) => response.json())
             .then((data) => setPlans(data))
             .catch((error) => console.error('Error fetching ground plans:', error));
 
         // Fetch bookings
-        fetch(`http://${ip}/api/ground/bookings`)
+        fetch(`https://${ip}/api/ground/bookings`)
             .then((response) => response.json())
             .then((data) => {
                 const sortedBookings = data.sort((a, b) => {
@@ -147,7 +147,7 @@ const GroundManagement = () => {
         setEditMode(true);
         const userId = localStorage.getItem('userid');
         try {
-            const response = await fetch(`http://${ip}/api/ground/booking/transactions`, {
+            const response = await fetch(`https://${ip}/api/ground/booking/transactions`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -185,7 +185,7 @@ const GroundManagement = () => {
 
         const userId = localStorage.getItem('userid'); // Assuming user ID is stored in localStorage
 
-        fetch(`http://${ip}/api/ground/booking/mark-as-paid`, {
+        fetch(`https://${ip}/api/ground/booking/mark-as-paid`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -231,7 +231,7 @@ const GroundManagement = () => {
         };
 
         if (editMode) {
-            fetch(`http://${ip}/api/ground/bookings/${currentEditId}`, {
+            fetch(`https://${ip}/api/ground/bookings/${currentEditId}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(updatedBookingForm),
@@ -251,7 +251,7 @@ const GroundManagement = () => {
                 })
                 .catch((error) => console.error('Error updating booking:', error));
         } else {
-            fetch(`http://${ip}/api/ground/book`, {
+            fetch(`https://${ip}/api/ground/book`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(updatedBookingForm),

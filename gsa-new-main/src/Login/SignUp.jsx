@@ -306,7 +306,7 @@ function SignUp() {
       setIsLoading(true);
       try {
         const response = await axios.post(
-          `http://${ip}/api/auth/signup`,
+          `https://${ip}/api/auth/signup`,
           {
             name: formData.name,
             mobile_no: formData.phone,

@@ -23,7 +23,7 @@
 
 //     const fetchTrainees = async () => {
 //         try {
-//             const response = await axios.get(`http://${ip}/api/academy/trainees`);
+//             const response = await axios.get(`https://${ip}/api/academy/trainees`);
 //             setTrainees(response.data);
 //         } catch (error) {
 //             console.error("Error fetching trainees:", error);
@@ -47,9 +47,9 @@
 
 //         try {
 //             if (editingTrainee) {
-//                 await axios.put(`http://${ip}/api/academy/trainee/${editingTrainee._id}`, formData);
+//                 await axios.put(`https://${ip}/api/academy/trainee/${editingTrainee._id}`, formData);
 //             } else {
-//                 await axios.post(`http://${ip}/api/academy/trainee`, formData);
+//                 await axios.post(`https://${ip}/api/academy/trainee`, formData);
 //             }
 //             fetchTrainees();
 //             setShowTraineePopup(false);
@@ -61,7 +61,7 @@
 
 //     const toggleTraineeActive = async (id) => {
 //         try {
-//             await axios.patch(`http://${ip}/api/academy/trainee/${id}/toggle`);
+//             await axios.patch(`https://${ip}/api/academy/trainee/${id}/toggle`);
 //             fetchTrainees();
 //         } catch (error) {
 //             console.error("Error toggling trainee status:", error);
@@ -70,7 +70,7 @@
 
 //     const generateIdCard = async (id) => {
 //         try {
-//             await axios.post(`http://${ip}/api/academy/trainee/${id}/generate-id`);
+//             await axios.post(`https://${ip}/api/academy/trainee/${id}/generate-id`);
 //             fetchTrainees();
 //         } catch (error) {
 //             console.error("Error generating ID card:", error);
@@ -242,7 +242,7 @@
 
 //     const fetchTrainees = async () => {
 //         try {
-//             const response = await axios.get(`http://${ip}/api/academy/trainees`);
+//             const response = await axios.get(`https://${ip}/api/academy/trainees`);
 //             setTrainees(response.data);
 //         } catch (error) {
 //             console.error("Error fetching trainees:", error);
@@ -266,9 +266,9 @@
 
 //         try {
 //             if (editingTrainee) {
-//                 await axios.put(`http://${ip}/api/academy/trainee/${editingTrainee._id}`, formData);
+//                 await axios.put(`https://${ip}/api/academy/trainee/${editingTrainee._id}`, formData);
 //             } else {
-//                 await axios.post(`http://${ip}/api/academy/trainee`, formData);
+//                 await axios.post(`https://${ip}/api/academy/trainee`, formData);
 //             }
 //             fetchTrainees();
 //             setShowTraineePopup(false);
@@ -280,7 +280,7 @@
 
 //     const toggleTraineeActive = async (id) => {
 //         try {
-//             await axios.patch(`http://${ip}/api/academy/trainee/${id}/toggle`);
+//             await axios.patch(`https://${ip}/api/academy/trainee/${id}/toggle`);
 //             fetchTrainees();
 //         } catch (error) {
 //             console.error("Error toggling trainee status:", error);
@@ -289,7 +289,7 @@
 
 //     const generateIdCard = async (id) => {
 //         try {
-//             await axios.post(`http://${ip}/api/academy/trainee/${id}/generate-id`);
+//             await axios.post(`https://${ip}/api/academy/trainee/${id}/generate-id`);
 //             fetchTrainees();
 //         } catch (error) {
 //             console.error("Error generating ID card:", error);
@@ -481,7 +481,7 @@
 
 //     const fetchTrainees = async () => {
 //         try {
-//             const response = await axios.get(`http://${ip}/api/academy/trainees`);
+//             const response = await axios.get(`https://${ip}/api/academy/trainees`);
 //             setTrainees(response.data);
 //         } catch (error) {
 //             console.error("Error fetching trainees:", error);
@@ -490,7 +490,7 @@
 
 //     const fetchPlans = async () => {
 //         try {
-//             const response = await axios.post(`http://${ip}/api/academy/active-plans`);
+//             const response = await axios.post(`https://${ip}/api/academy/active-plans`);
 //             setPlans(response.data);
 //             console.log(response.data);
 //         } catch (error) {
@@ -515,9 +515,9 @@
 
 //         try {
 //             if (editingTrainee) {
-//                 await axios.put(`http://${ip}/api/academy/trainee/${editingTrainee._id}`, formData);
+//                 await axios.put(`https://${ip}/api/academy/trainee/${editingTrainee._id}`, formData);
 //             } else {
-//                 await axios.post(`http://${ip}/api/academy/trainee`, formData);
+//                 await axios.post(`https://${ip}/api/academy/trainee`, formData);
 //             }
 //             fetchTrainees();
 //             setShowTraineePopup(false);
@@ -529,7 +529,7 @@
 
 //     const toggleTraineeActive = async (id) => {
 //         try {
-//             await axios.patch(`http://${ip}/api/academy/trainee/${id}/toggle`);
+//             await axios.patch(`https://${ip}/api/academy/trainee/${id}/toggle`);
 //             fetchTrainees();
 //         } catch (error) {
 //             console.error("Error toggling trainee status:", error);
@@ -538,7 +538,7 @@
 
 //     const generateIdCard = async (id) => {
 //         try {
-//             await axios.post(`http://${ip}/api/academy/trainee/${id}/generate-id`);
+//             await axios.post(`https://${ip}/api/academy/trainee/${id}/generate-id`);
 //             fetchTrainees();
 //         } catch (error) {
 //             console.error("Error generating ID card:", error);
@@ -851,7 +851,7 @@
 
 //     const fetchTrainees = async () => {
 //         try {
-//             const response = await axios.get(`http://${ip}/api/academy/trainees`);
+//             const response = await axios.get(`https://${ip}/api/academy/trainees`);
 //             setTrainees(response.data);
 //         } catch (error) {
 //             console.error("Error fetching trainees:", error);
@@ -860,7 +860,7 @@
 
 //     const fetchPlans = async () => {
 //         try {
-//             const response = await axios.post(`http://${ip}/api/academy/active-plans`);
+//             const response = await axios.post(`https://${ip}/api/academy/active-plans`);
 //             setPlans(response.data);
 //         } catch (error) {
 //             console.error("Error fetching plans:", error);
@@ -900,11 +900,11 @@
 //         try {
 //             if (editingTrainee) {
 //                 await axios.put(
-//                     `http://${ip}/api/academy/trainee/${editingTrainee._id}`,
+//                     `https://${ip}/api/academy/trainee/${editingTrainee._id}`,
 //                     formData
 //                 );
 //             } else {
-//                 await axios.post(`http://${ip}/api/manager/add-new-trainee`, formData);
+//                 await axios.post(`https://${ip}/api/manager/add-new-trainee`, formData);
 //             }
 //             fetchTrainees();
 //             setShowTraineePopup(false);
@@ -964,7 +964,7 @@
 //                         <div className="w-full flex items-center justify-center">
 //                         {trainee.photo && (
 //                             <img
-//                                 src={`http://${ip}/uploads/${trainee.photo}`}
+//                                 src={`https://${ip}/uploads/${trainee.photo}`}
 //                                 alt={trainee.name}
 //                                 className="w-48 h-64 object-cover rounded-md mb-4"
 //                             />
@@ -1221,7 +1221,7 @@ const TraineeManagement = () => {
 
     const fetchTrainees = async () => {
         try {
-            const response = await axios.get(`http://${ip}/api/academy/trainees`);
+            const response = await axios.get(`https://${ip}/api/academy/trainees`);
             setTrainees(response.data);
         } catch (error) {
             console.error("Error fetching trainees:", error);
@@ -1230,7 +1230,7 @@ const TraineeManagement = () => {
 
     const fetchPlans = async () => {
         try {
-            const response = await axios.post(`http://${ip}/api/academy/active-plans`);
+            const response = await axios.post(`https://${ip}/api/academy/active-plans`);
             setPlans(response.data);
         } catch (error) {
             console.error("Error fetching plans:", error);
@@ -1270,11 +1270,11 @@ const TraineeManagement = () => {
         try {
             if (editingTrainee) {
                 await axios.put(
-                    `http://${ip}/api/academy/trainee/${editingTrainee._id}`,
+                    `https://${ip}/api/academy/trainee/${editingTrainee._id}`,
                     formData
                 );
             } else {
-                await axios.post(`http://${ip}/api/manager/add-new-trainee`, formData);
+                await axios.post(`https://${ip}/api/manager/add-new-trainee`, formData);
             }
             fetchTrainees();
             setShowTraineePopup(false);
@@ -1336,7 +1336,7 @@ const TraineeManagement = () => {
                         <div className="w-full flex items-center justify-center">
                             {trainee.photo && (
                                 <img
-                                    src={`http://${ip}/uploads/${trainee.photo}`}
+                                    src={`https://${ip}/uploads/${trainee.photo}`}
                                     alt={trainee.name}
                                     className="w-48 h-64 object-cover rounded-md mb-4"
                                 />

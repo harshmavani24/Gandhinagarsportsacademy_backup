@@ -18,7 +18,7 @@ const Ground = () => {
   useEffect(() => {
     const fetchPlans = async () => {
       try {
-        const response = await axios.post(`http://${ip}/api/ground/plans`);
+        const response = await axios.post(`https://${ip}/api/ground/plans`);
         setPlans(response.data);
         console.log("Plans fetched:", response.data);
       } catch (error) {

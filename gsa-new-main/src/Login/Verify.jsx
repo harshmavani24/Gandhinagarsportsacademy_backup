@@ -12,9 +12,9 @@ function Verify() {
   const [loading, setLoading] = useState(false);
   const key = import.meta.env.VITE_ENC_KEY;
   const captchaKey = import.meta.env.VITE_CAPTCHA_KEY;
-  let API_URL = `http://${import.meta.env.VITE_IP}/api/auth/verify-otp`;
+  let API_URL = `https://${import.meta.env.VITE_IP}/api/auth/verify-otp`;
 if (Cookies.get('secret')) {
-  API_URL = `http://${import.meta.env.VITE_IP}/api/auth/verify-otp-login`;
+  API_URL = `https://${import.meta.env.VITE_IP}/api/auth/verify-otp-login`;
 }
 
   // Handle OTP input and validate it

@@ -39,7 +39,7 @@ const AcademyManagement = () => {
   useEffect(() => {
     // Fetch existing plans
     axios
-      .post(`http://${ip}/api/academy/all-plans`, {
+      .post(`https://${ip}/api/academy/all-plans`, {
         userId: localStorage.getItem("userid"),
       })
       .then((response) => setPlans(response.data));
@@ -52,11 +52,11 @@ const AcademyManagement = () => {
   const handleSubmit = async () => {
     if (editingPlan) {
       await axios.put(
-        `http://${ip}/api/academy/update-plan/${editingPlan._id}`,
+        `https://${ip}/api/academy/update-plan/${editingPlan._id}`,
         formData
       );
     } else {
-      await axios.post(`http://${ip}/api/academy/add-plan`, formData);
+      await axios.post(`https://${ip}/api/academy/add-plan`, formData);
     }
     setFormData({
       name: "",
@@ -68,7 +68,7 @@ const AcademyManagement = () => {
     setShowPopup(false);
     setEditingPlan(null);
     const updatedPlans = await axios.post(
-      `http://${ip}/api/academy/all-plans`,
+      `https://${ip}/api/academy/all-plans`,
       { userId: localStorage.getItem("userid") }
     );
     setPlans(updatedPlans.data);
@@ -76,10 +76,10 @@ const AcademyManagement = () => {
 
   const togglePlanActive = async (id) => {
     await axios.patch(
-      `http://${ip}/api/academy/update-plan-status/${id}/toggle`
+      `https://${ip}/api/academy/update-plan-status/${id}/toggle`
     );
     const updatedPlans = await axios.post(
-      `http://${ip}/api/academy/all-plans`,
+      `https://${ip}/api/academy/all-plans`,
       { userId: localStorage.getItem("userid") }
     );
     setPlans(updatedPlans.data);
